@@ -7,6 +7,7 @@ import (
 
 // PutDatabaseItem performs verification of inbound requests against database state
 func PutDatabaseItem(item *Item) error {
+
 	// get all database items
 	dbValueSlice := GetBoltContent()
 

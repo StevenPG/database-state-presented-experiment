@@ -30,7 +30,7 @@ func RunHttpServer() {
 	router.GET("/get", allHandler)
 	log.Print("Loading /get endpoint...")
 
-	router.PUT("/put", putHandler)
+	router.POST("/put", putHandler)
 	log.Print("Loading /put endpoint...")
 
 	log.Print("Starting HTTP Server on localhost:8080")

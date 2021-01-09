@@ -6,6 +6,6 @@ import (
 
 func main() {
 	pkg.StartDatabase()
-	go pkg.ReportStats()
+	//go pkg.ReportStats()
 	pkg.RunHttpServer()
 }
