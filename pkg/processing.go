@@ -19,7 +19,6 @@ func PutDatabaseItem(item *Item) error {
 	// unravel request
 	for _, presentedValue := range item.State {
 		// verify they match perfectly
-		log.Printf("Processing Item %s with state value %s", item.Key, presentedValue.Value)
 		accurateState := contains(dbValueSlice, presentedValue.Value)
 		if accurateState == false {
 			log.Printf("Validating inbound state, failed verification:\n%s", item.State)
@@ -33,7 +32,6 @@ func PutDatabaseItem(item *Item) error {
 
 func contains(s []string, str string) bool {
 	for _, v := range s {
-		log.Printf("Comparing %s with %s", str, v)
 		if v == str {
 			return true
 		}

@@ -26,3 +26,10 @@ retrieves the other 9 entries and builds the request.
 over each other as they will be unaware of the other services attempts to update the database.
 
 - Further configurations are TBD if there is huge deadlocking/clashing with the above configurations.
+
+## Findings
+
+There is an upper limit for this sort of system. 
+
+Found Limit 1: 3 users at 50ms per request. 4 users causes heavy failures.
+Found Limit 2: 9 users at 250ms per request. 10 users causes light failures.
